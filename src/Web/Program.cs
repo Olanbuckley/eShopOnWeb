@@ -34,7 +34,7 @@ if (builder.Environment.IsDevelopment() || builder.Environment.EnvironmentName =
 }
 else
 {
-    // Configure SQL Server (prod)
+    // Configure SQL Server (prod) HELLO
     var credential = new ChainedTokenCredential(new AzureDeveloperCliCredential(), new DefaultAzureCredential());
     builder.Configuration.AddAzureKeyVault(new Uri(builder.Configuration["AZURE_KEY_VAULT_ENDPOINT"] ?? ""), credential);
     builder.Services.AddDbContext<CatalogContext>(c =>
